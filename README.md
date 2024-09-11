@@ -8,7 +8,7 @@ As informações guardadas são vinculadas aos seus usuários e só podem ser ac
 
 1. Clone o repositório e instale as dependências. É preferível instalar em um virtualenv:
 ```sh
-    git clone https://github.com/fe-fe/agendame/
+    git clone https://github.com/fe-fe/agendinha/
     cd agendinha
     py -m venv venv
     venv\scripts\activate
