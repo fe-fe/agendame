@@ -58,7 +58,7 @@ As informações guardadas são vinculadas aos seus usuários e só podem ser ac
 
 ## Uso
 
-1. Para começar, é só fazer seu cadastro e login:<br>
+1. Para começar, é só fazer seu cadastro e login:<br><br>
 ![pagina de cadastro](README/cadastro.png)
 ![pagina de login](README/login.png)
 
@@ -68,4 +68,4 @@ As informações guardadas são vinculadas aos seus usuários e só podem ser ac
 3. Clicando em uma matéria, você pode ver e editar seus detalhes:<br>
 ![pagina da materia](README/detalhemateria.png)
 
-
+## <3
