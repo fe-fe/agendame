@@ -6,7 +6,7 @@ As informações guardadas são vinculadas aos seus usuários e só podem ser ac
 ## Instalação
 
 
-1. Clone o repositório e instale as dependências. É preferível instalar em um virtualenv:instalar em um virtualenv:
+1. Clone o repositório e instale as dependências. É preferível instalar em um virtualenv:
 ```sh
     git clone https://github.com/fe-fe/agendame/
     cd agendame
