@@ -27,13 +27,13 @@ As informações guardadas são vinculadas aos seus usuários e só podem ser ac
 ```
 
 4. Na pasta principal, com o nome que voce deu ao projeto, copie a pasta "templates" deste repositorio
-<br><img href="README/project1.png" alt="pasta do projeto">
+![pasta do projeto](README/project1.png)
 
 5. Entre na outra pasta com o nome do projeto e copie nela os arquivos da pasta "project" desse repositorio
-<br><img href="README/project2.png" alt="config do projeto">
+![pasta de config do projeto](README/project2.png)
  
 6. Va para a pasta do app e copie para dentro dela os arquivos da pasta "app" desse repositorio
-<br><img href="README/app.png" alt="pasta do app">
+![pasta do app](README/app.png)
 
 7. Construa e aplique as migrations
 ```sh
@@ -54,13 +54,13 @@ As informações guardadas são vinculadas aos seus usuários e só podem ser ac
 ## Uso
 
 1. Para comecar, e so fazer seu cadastro e login:
-<br><img href="README/cadastro.png" alt="pagina de cadastro">
-<br><img href="README/login.png" alt="pagina de login">
+![pagina de cadastro](README/cadastro.png)
+![pagina de login](README/login.png)
 
 2. No painel, voce pode adicionar suas materias e ver sua frequencia:
-<br><img href="README/painel.png" alt="pagina do painel">
+![pagina do painel](README/painel.png)
 
 3. Clicando numa materia, voce pode ver e editar seus detalhes:
-<br><img href="README/detalhemateria.png" alt="pagina da materia">
+![pagina da materia](README/detalhemateria.png)
 
 
