@@ -62,10 +62,10 @@ As informações guardadas são vinculadas aos seus usuários e só podem ser ac
 ![pagina de cadastro](README/cadastro.png)
 ![pagina de login](README/login.png)
 
-2. No painel, você pode adicionar suas matérias e ver sua frequência:<br>
+2. No painel, você pode adicionar suas matérias e ver sua frequência:<br><br>
 ![pagina do painel](README/painel.png)
 
-3. Clicando em uma matéria, você pode ver e editar seus detalhes:<br>
+3. Clicando em uma matéria, você pode ver e editar seus detalhes:<br><br>
 ![pagina da materia](README/detalhemateria.png)
 
 ## <3
