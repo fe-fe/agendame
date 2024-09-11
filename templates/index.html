@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% load static %}
+    {% block content %}
+        <div class="container painel">
+            <div class="line flex jusr m1">
+    
+                <a href="{% url 'logout_user' %}">
+                    <button class="bt fbt fade">logout</button>
+                </a>
+                <div class="seph"></div>
+                <div class="box top fade">
+                    <span>Bem-vindo(a), {{ name }} <3<span>
+                </div>     
+    
+            </div>
+            <div class="box flex mainbox mb5">
+    
+                <div class="sect">
+    
+                    <div class="line jusc">
+                        <label class="nome">Minhas Materias</label>
+                    </div>
+    
+                    {% for materia in materias %}
+                    
+                    <a href="{% url 'ver_materia' materia.id %}">
+                        <button name="matid" value="{{materia.id}}" class="minibox materia matb ">{{materia.nome}}</button>
+                    </a>
+    
+                    {% endfor %}
+    
+                    <div class="line jusb">
+                        <button id="addbt" class="bt fade">adicionar</button>
+                        <button id="rembt" class="bt fade">remover</button>
+                    </div>
+    
+                    <div id="add" class="modal hide">
+                        <div class="mcontent">
+                            <div class="flexr"><button id="closeadd" class="bt close fade">cancelar</button></div>
+    
+                            <div class="bg">
+                                <div class="minibox mb0">
+                                    <form class="jusl mform" id="addmat">
+                                        {% csrf_token %}
+                                        <label class="nome">nova materia</label>
+                                        <input type="text" autocomplete="off" spellcheck="false" maxlength="50" id="nomeMateria" name="nomeMateria" placeholder="Ex: Engenharia de Requisitos" class="iform mb15" required>
+                                        <div class="jusc">
+                                            <button id="submitadd" data-url="{% url 'materias' %}" onclick="addsubmit()" class="bt fade">Salvar</button>
+                                        </div>
+                                        
+                                    </form>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+    
+                    <div id="rem" class="modal hide">
+                        <div class="mcontent">
+                            <div class="flexr"><button id="closerem" class="bt close fade">cancelar</button></div>
+    
+                            <div class="bg">
+                                <div class="minibox mb0">
+                                    <form class="jusl mform" id="remmat">
+                                        {% csrf_token %}
+                                        <label class="nome">remover materia</label>
+                                        <select id="rselect" class="iform mb15">
+    
+                                            {% for m in materias %}
+                                                <option id="{{m.id}}">{{m.nome}}</option>
+                                            {% endfor %}
+                                            
+                                        </select>
+                                        <div class="jusc">
+                                            <button id="submitrem" data-url="{% url 'materias' %}" onclick="remsubmit()" class="bt fade">remover</button>
+                                        </div>
+                                        
+                                    </form>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <div class="seph"></div>
+    
+                <div class="sect">
+                    
+                    <div class="minibox pil">
+                        <div class="line jusc">
+                            <label class="nome">Frequencia Geral</label>
+                        </div>
+    
+                        <div class="freqbar alc hide mb15">
+                            <div id="bar1" class="bar bar1 alc"><span class="freqnum freq" >{{freq}}</span></div>
+                            <div id="bar2" class="bar bar2"></div>
+                        </div>
+                    </div>
+
+                    
+                    {% if baixas %}
+
+                        <div class="minibox pil">
+                            <div class="line jusc">
+                                <label class="nome">Frequencias Baixas</label>
+                            </div>
+
+                            {% for b in baixas %}
+                                <span class="freqnome">{{b.nome}}</span>
+                                <div class="freqbar alc pt05 mb15">
+                                    <div id="bar1" class="bar bar1 alc"><span class="freqnum freq">{{b.freq}}</span></div>
+                                    <div id="bar2" class="bar bar2"></div>
+                                </div>
+                            {% endfor %}
+
+                        </div>
+
+                    {% endif %}
+    
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="{% static '/js/index.js' %}"></script>
+
+    {% endblock %}
+

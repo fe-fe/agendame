@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+    {% load static %}
+    {% block content %}
+        <div class="container login">
+            <div class="line flex jusr m1">
+                <a href="{% url 'cadastro' %}">
+                    <button class="bt fbt fade">cadastre-se</button>
+                </a>
+            </div>
+    
+            <div class="box smallmbox basecolumn">
+                
+                <div class="sect">
+    
+                    <div class="line jusc">
+                        <label class="titu">Login</label>
+                    </div>
+                    
+                    <form id="form" class="mform" action="{% url 'login_user' %}" method="POST">
+                        {% csrf_token %}
+                        <span class="nome">usuario</span><br>
+                        <input autocomplete="off" id="user" name="username" class="iform {{ classerror }}"><br>
+                        
+                        <span class="nome">senha</span><br>
+                        <input autocomplete="off" id="pass" name="password" type="password" class="iform {{ classerror }} mb15"><br>
+    
+                        <div class="flex jusc">
+                            <button type="submit" class="bt fbt fade">login</button>
+                        </div>
+    
+                    </form>
+                    
+                    
+                    
+    
+                </div>
+    
+                
+    
+            </div>
+        </div>
+    </div>
+
+    <span id="error" class="hide">{{ erro }}</span>
+
+
+    <script src="{% static '/js/login.js' %}"></script>
+
+{% endblock %}

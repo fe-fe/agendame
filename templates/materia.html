@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+    {% load static %}
+    {% block content %}
+    
+        <div class="container painel">
+            <div class="line flex jusr m1">
+            
+                <div class="bflex jusr">
+                    <button onclick="salvar()" class="bt fbt fade">salvar</button>
+                    <div class="bsep"></div>
+                    <a href="{% url 'painel' %}">
+                        <button class="bt fbt fade">voltar</button>
+                    </a>
+                </div>
+                
+                <div class="seph"></div>
+                <input spellcheck="false" id="mainnota" matid="{{materia.id}}" class="box top fade" type="text" value="{{materia.nome}}">     
+                
+            </div>
+
+            <div class="box flex mainbox">
+
+                <div class="sect">
+
+                    <div action="" class="mform p0">
+                        {% csrf_token %}
+                        <div class="line jusl">
+                            <label class="nome">Notas</label>
+                        </div>
+
+                        {% for nota in notas %}
+                            <div class="minibox nqtd">
+                                <label class="nome">Nota {{forloop.counter}}</label>
+                                <div class="pb05"></div>
+                                <div class="flex nt">
+                                    <input spellcheck="false" class="iform minw50 ntn" type="text" value="{{ nota.nome }}" placeholder="Nome">
+                                    <div class="notavars alc">
+                                        <label class="ml05">Peso</label><input maxlength="2" pellcheck="false" class="notainput ml05 ntp" id="{{nota.id}}" type="text" value="{{ nota.peso }}" placeholder="Peso"></label>
+                                        <label class="ml05">Nota</label><input maxlength="3" spellcheck="false" class="notainput ml05 ntr" id="{{nota.id}}" type="text" value="{{ nota.resultado }}" placeholder="Nota"></label>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        {% endfor %}
+                        
+                        <div class="line jusc">
+                            <button id="addbt" class="bt fade">adicionar</button>
+                            <button id="rembt" class="bt fade">remover</button>
+                        </div>
+
+                    </div>
+
+                    <div id="add" class="modal hide">
+                        <div class="mcontent">
+                            <div class="flexr"><button id="closeadd" class="bt close fade">cancelar</button></div>
+    
+                            <div class="bg">
+                                <div class="minibox mb0">
+                                    <div class="jusl mform" id="addmat">
+                                        <label class="nome">nova nota</label>
+                                        <input type="text" autocomplete="off" spellcheck="false" maxlength="50" id="nomeNota" name="nomeNota" placeholder="Ex: Prova 2" class="iform mb15" required>
+                                        <div class="jusc">
+                                            <button id="submitadd" type="button" data-url="{% url 'editar_materia' %}" onclick="addsubmit(event)" class="bt fade">Salvar</button>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div id="rem" class="modal hide">
+                        <div class="mcontent">
+                            <div class="flexr"><button id="closerem" class="bt close fade">cancelar</button></div>
+    
+                            <div class="bg">
+                                <div class="minibox mb0">
+                                    <form class="jusl mform" id="remmat">
+                                        <label class="nome">remover nota</label>
+                                        <select id="rselect" class="iform mb15">
+    
+                                            {% for nota in notas %}
+                                                <option id="{{nota.id}}">{{nota.nome}}</option>
+                                            {% endfor %}
+                                            
+                                        </select>
+                                        <div class="jusc">
+                                            <button id="submitrem" data-url="{% url 'editar_materia' %}" onclick="remsubmit()" class="bt fade">remover</button>
+                                        </div>
+                                        
+                                    </form>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+                <div class="seph"></div>
+                <div class="sect">
+                    <div class="line jusl">
+                        <label class="nome">Frequencia<label  id="freqq"></label></label>
+                    </div>
+                    <div class="minibox alc pil flex">
+                        <label>Horas</label><input type="text" id="horas" onblur="gerarFreq()" value="{{ materia.horas }}" maxlength="3" class="miniinput">
+                        <label>Faltas</label><input type="text" id="faltas" onblur="gerarFreq()" value="{{ materia.faltas }}" maxlength="3" class="miniinput">
+                    </div>
+
+                    <div class="minibox pil">
+                        <div class="line jusl">
+                            <span class="nome">Media: <span id="media"></span></span><br>
+                        </div>
+                        <span id="situacao" class="jusl flex"></span>
+                        <span id="final" class="jusl flex"></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <script src="{% static '/js/materia.js' %}"></script>
+
+
+    {% endblock %}
