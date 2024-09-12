@@ -15,9 +15,9 @@ As informações guardadas são vinculadas aos seus usuários e só podem ser ac
     pip install -r requirements.txt
 ```
 
-2. Crie seu projeto Django:
+2. Crie seu projeto Django com o nome "estudos":
 ```sh
-    django-admin startproject (nome do projeto)
+    django-admin startproject estudos
 ```
 
 3. Volte para a pasta onde está o arquivo "manage.py" e crie um app chamado "core" com o Django:
