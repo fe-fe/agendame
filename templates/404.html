@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Erro 404: Pagina nao encontrada{% endblock %}
+
+{% block content %}
+
+<div class="container login">
+    <div class="line flex jusr m1">
+        <a href="{% url 'painel' %}">
+            <button class="bt fbt fade">Inicio</button>
+        </a>
+    </div>
+
+    <div class="box flex smallmbox mb15">
+        
+        <div class="sect">
+
+            <div class="line jusc">
+                <label class="titu">Erro 404</label>
+            </div>
+            <span class="jusc flex">Pagina nao Encontrada</span>
+            
+        </div>     
+    </div>
+
+</div>
+{% endblock %}
