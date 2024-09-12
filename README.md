@@ -1,15 +1,15 @@
-# agenda.me 📝💕
+# agendinha 📝💕
 
-Projeto Django que permite que os usuários cadastrem suas matérias, notas e faltas de maneira simples e organizada. Ele calcula automaticamente a situação de cada matéria, ajudando o usuário a saber quanto precisa para passar e destacando matérias com frequência baixa, que precisam de mais atenção.
+Projeto Django feito em 6 dias que permite que os usuários cadastrem suas matérias, notas e faltas de maneira simples e organizada. Ele calcula automaticamente a situação de cada matéria, ajudando o usuário a saber quanto precisa para passar e destacando matérias com frequência baixa, que precisam de mais atenção.
 As informações guardadas são vinculadas aos seus usuários e só podem ser acessadas por seus respectivos donos, garantindo privacidade aos estudantes.
 
 ## Instalação
 
 
-1. Clone o repositório e instale as dependências. É preferível instalar em um virtualenv:instalar em um virtualenv:
+1. Clone o repositório e instale as dependências. É preferível instalar em um virtualenv:
 ```sh
-    git clone https://github.com/fe-fe/agendame/
-    cd agendame
+    git clone https://github.com/fe-fe/agendinha/
+    cd agendinha
     py -m venv venv
     venv\scripts\activate
     pip install -r requirements.txt
@@ -62,10 +62,10 @@ As informações guardadas são vinculadas aos seus usuários e só podem ser ac
 ![pagina de cadastro](README/cadastro.png)
 ![pagina de login](README/login.png)
 
-2. No painel, você pode adicionar suas matérias e ver sua frequência:<br>
+2. No painel, você pode adicionar suas matérias e ver sua frequência:<br><br>
 ![pagina do painel](README/painel.png)
 
-3. Clicando em uma matéria, você pode ver e editar seus detalhes:<br>
+3. Clicando em uma matéria, você pode ver e editar seus detalhes:<br><br>
 ![pagina da materia](README/detalhemateria.png)
 
 ## <3
