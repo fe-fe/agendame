@@ -29,7 +29,7 @@ Link para testes: https://lovefefe.pythonanywhere.com/
 
 4. Na pasta principal, com o nome que você deu ao projeto, copie a pasta "templates" deste repositório
 
-![pasta do projeto](README/project1.png)
+![pasta do projeto](README/project.png)
 
 <br>
 5. Entre na outra pasta com o nome do projeto e copie nela os arquivos da pasta "project" deste repositório
